@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kartkowka"
         tools:targetApi="31">
-        <activity
+        <activitya
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -24,7 +24,7 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
+        </activitya>
     </application>
 
 </manifest>
