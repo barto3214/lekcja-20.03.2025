@@ -1,20 +1,29 @@
 package com.example.kartkowka;
 
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class PunktyViewModel extends ViewModel {
-    private int punkty = 0;
-
-    public int getPunkty() {
-        return punkty;
+    private MutableLiveData<Integer> points;
+    public MutableLiveData<Integer> getPunkty() {
+        if(points == null){
+            points = new MutableLiveData<>();
+            points.setValue(0);
+        }
+        return points;
     }
-
-    public void setPunkty(int punkty) {
-        this.punkty = punkty;
+    public void setpunkty(MutableLiveData<Integer> points) {
+        this.points = points;
     }
-
-    public void addpunkty(int p ){
-        punkty += p;
+    public void addpunkty(int p){
+        if(points==null)
+        {
+            points = new MutableLiveData<>();
+            points.setValue(0);
+        }
+        else{
+            points.setValue(points.getValue()+p);
+        }
 
 
     }
