@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-        //.textView.setText("siema");            //jak chcesz sie dowiedziec jak to wszystko działa to ViewModel w neta
+        //binding.textView.setText("siema");            //jak chcesz sie dowiedziec jak to wszystko działa to ViewModel w neta
         punktyViewModel = new ViewModelProvider(this).get(PunktyViewModel.class);
 
         punktyViewModel.getPunkty().observe(this,
